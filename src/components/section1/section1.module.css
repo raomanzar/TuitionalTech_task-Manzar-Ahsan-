@@ -1,6 +1,6 @@
 .container {
   /* width: 100%; */
-  background: url("background.png") no-repeat center center / cover;
+  background: url("/background.png") no-repeat center center / cover;
   padding-inline: 60px;
   padding-block: 30px;
   display: flex;
