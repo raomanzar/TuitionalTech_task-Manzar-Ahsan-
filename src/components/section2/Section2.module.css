@@ -1,0 +1,225 @@
+.container {
+  display: flex;
+}
+aside {
+  width: 40%;
+  position: relative;
+  z-index: 0;
+  height: 100%;
+}
+
+aside > :nth-child(1) {
+  position: absolute;
+  width: 250px;
+  height: 82px;
+  left: 10%;
+  top: 0;
+}
+
+aside > :nth-child(2) {
+  position: absolute;
+  width: 380px;
+  height: 366px;
+  left: 0;
+  bottom: 0;
+}
+
+aside > :nth-child(3) {
+  position: absolute;
+  width: 363px;
+  height: 462px;
+  right: 0;
+  bottom: 0;
+}
+
+aside > :nth-child(4) {
+  position: absolute;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.3);
+  width: 90px;
+  height: 90px;
+  bottom: 115px;
+  right: -25px;
+}
+
+aside > :nth-child(4) > img {
+  width: 79px;
+  height: 64px;
+}
+
+.daysMenuBox {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 10px 30px 30px 80px;
+  background-color: transparent;
+}
+
+.daysMenuBox > h2 {
+  font-family: "League Spartan";
+  line-height: 36px;
+  margin: 0;
+}
+
+.daysMenuBox > p {
+  font-family: "League Spartan";
+  line-height: 32px;
+}
+
+.daysMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+  background-color: #f1f7facc;
+  padding: 20px;
+  box-shadow: inset 0px -2px 4px 1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.menuLine {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.toggleButton {
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  padding: 3px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+}
+
+.toggleButton > span {
+  border-radius: 100%;
+  background-color: #ffffff;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.toggleButton.on {
+  background-color: #38b6ff;
+}
+
+.toggleButton.off {
+  background-color: #a2a2a2;
+}
+
+.ON {
+  transform: translateX(25px);
+}
+
+.OFF {
+  transform: translateX(0);
+}
+
+.menuLine > p {
+  font-weight: 600;
+  font-family: "League Spartan";
+}
+
+.optionBox {
+  display: flex;
+  gap: 15px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-family: "League Spartan";
+  cursor: pointer;
+}
+
+.option.on {
+  background-color: #38b6ff;
+  color: #fff;
+  border: 1px solid #38b6ff;
+}
+
+.option.off {
+  background-color: none;
+}
+
+.noOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigation {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subNavigation {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.navigation > div {
+  font-family: "League Spartan";
+  font-weight: 800;
+}
+
+.navigation > div > span {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 100%;
+  box-shadow: inset 0px -4px 4px -2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  aside {
+    height: 500px;
+    width: 50%;
+  }
+  .daysMenuBox {
+    width: 100%;
+  }
+
+  .daysMenuBox > h2 {
+    text-align: center;
+  }
+  .daysMenuBox > p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .daysMenu {
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+  }
+  .menuLine {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .navigation {
+    width: 100%;
+  }
+}

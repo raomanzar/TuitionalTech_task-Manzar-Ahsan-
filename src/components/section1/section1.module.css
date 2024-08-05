@@ -1,0 +1,116 @@
+.container {
+  /* width: 100%; */
+  background: url("background.png") no-repeat center center / cover;
+  padding-inline: 60px;
+  padding-block: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  max-width: 100%;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.logoBox {
+  border-radius: 10px;
+  padding-block: 12px;
+  background-color: #ffffffb2;
+  box-shadow: inset 0px -4px 4px -2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+}
+.logo {
+  height: 50px;
+  width: 230px;
+}
+
+.circle1 {
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  top: -15px;
+  left: -25px;
+  z-index: 0;
+}
+
+.circle2 {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  top: 15px;
+  right: -30px;
+  z-index: 0;
+}
+
+.optionsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.optionsBox > ul {
+  margin: 0;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optionsBox > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "League Spartan";
+}
+
+.optionsBox > ul > li > :nth-child(1) {
+  border-radius: 100%;
+  background-color: #38b6ff;
+  box-shadow: inset 0px -4px 4px -2px rgba(0, 0, 0, 0.3);
+  line-height: 27px;
+  padding: 12px 15px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.optionsBox > ul > li > :nth-child(2) {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.optionsBox > ul > :last-child > span {
+  color: #a2a2a2;
+}
+
+.optionsBox > ul > :last-child > :nth-child(1) {
+  background-color: #ffffff;
+}
+
+@media (max-width: 840px) {
+  .optionsBox > ul {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .optionsBox > ul {
+    flex-direction: column;
+  }
+}
